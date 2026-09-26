@@ -1,0 +1,73 @@
+@import "tailwindcss";
+
+@theme inline {
+  --color-canvas: #f3efe6;
+  --color-raised: #ffffff;
+  --color-ink: #1a1814;
+  --color-mute: #6a645c;
+  --color-line: #e4ddd0;
+  --color-gold: #8a5c16;
+  --color-gold-dim: #6f4a12;
+  --color-danger: #c24538;
+  --color-success: #2f7a4f;
+  --font-sans: var(--font-inter);
+}
+
+:root {
+  color-scheme: light;
+}
+
+html,
+body {
+  background: var(--color-canvas);
+  color: var(--color-ink);
+  min-height: 100%;
+}
+
+body {
+  font-family: var(--font-inter), Inter, sans-serif;
+  font-feature-settings: "ss01", "cv11";
+  letter-spacing: -0.011em;
+}
+
+::selection {
+  background: rgba(138, 92, 22, 0.16);
+  color: #1a1814;
+}
+
+:focus-visible {
+  outline: 2px solid rgba(138, 92, 22, 0.55);
+  outline-offset: 3px;
+}
+
+::-webkit-scrollbar {
+  width: 10px;
+  height: 10px;
+}
+
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #d4cdc0;
+  border-radius: 999px;
+  border: 2px solid #f3efe6;
+}
+
+.surface {
+  background: var(--color-raised);
+  border: 1px solid var(--color-line);
+  box-shadow: 0 1px 2px rgba(26, 24, 20, 0.04);
+}
+
+.auth-glow {
+  background:
+    radial-gradient(900px 520px at 12% -8%, rgba(138, 92, 22, 0.1), transparent 52%),
+    radial-gradient(700px 380px at 92% 8%, rgba(138, 92, 22, 0.045), transparent 46%),
+    var(--color-canvas);
+}
+
+.tabular {
+  font-variant-numeric: tabular-nums;
+}
